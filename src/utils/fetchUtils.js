@@ -1,4 +1,4 @@
-const baseUrl = "http://api.icndb.com/";
+const baseUrl = "https://api.icndb.com/";
 
 export const fetchJokes = async (jokeAmount = 10, firstName, lastName, category) => {
 	const searchUrl = `${baseUrl}jokes/random/${jokeAmount}?${firstName ? `&firstName=${firstName}` : ""}${lastName ? `&lastName=${lastName}` : ""}${category ? `&limitTo=[${category}]` : ""}`
