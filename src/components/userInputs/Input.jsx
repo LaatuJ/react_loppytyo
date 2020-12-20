@@ -4,7 +4,8 @@ export const Input = (props) => {
 	const handleOnChange = (e) => {
 		if (type === "number" && (e === "" || e >= 1)) {
 			onChange && onChange(e);
-		} else if (type === "input") {
+		} 
+		if (type !== "number") {
 			onChange && onChange(e);
 		}
 	};
@@ -20,7 +21,7 @@ export const Input = (props) => {
 					handleOnChange(e.target.value)
 				}}
 				onBlur={(e) => {
-					if (e.target.value < 1) {
+					if (e.target.value < 1 && type === "number") {
 						onChange && onChange(1);
 					}
 				}}
