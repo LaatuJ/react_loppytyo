@@ -21,7 +21,7 @@ export const Input = (props) => {
 					handleOnChange(e.target.value)
 				}}
 				onBlur={(e) => {
-					if (e.target.value < 1 && type === "number") {
+					if (e.target.value < 1 && e.target.ariaLabel === "number") {
 						onChange && onChange(1);
 					}
 				}}
