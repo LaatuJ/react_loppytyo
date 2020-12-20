@@ -5,7 +5,7 @@ export const Button = (props) => {
 	} = props;
 	return (
 		<div>
-			<button className="btn" onClick={() => onClick()}>{text}</button>
+			<button onClick={() => onClick()}>{text}</button>
 		</div>
 	);
 };

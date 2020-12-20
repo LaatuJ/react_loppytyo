@@ -1,8 +1,10 @@
-export const Input = (props) => {
+export const NumInput = (props) => {
 	const {type, onChange, value, label} = props;
 
 	const handleOnChange = (e) => {
-		onChange && onChange(e);
+		if (type === "number" && (e === "" || e >= 1)) {
+			onChange && onChange(e);
+		}
 	};
 	return (
 		<div>

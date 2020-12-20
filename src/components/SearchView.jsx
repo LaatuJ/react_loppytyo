@@ -1,6 +1,7 @@
 import { Button } from "./userInputs/Button";
 import { Dropdown } from "./userInputs/Dropdown";
 import { Input } from "./userInputs/Input";
+import { NumInput } from "./userInputs/NumInput";
 import {useState, useEffect} from "react";
 import { fetchCategoryNames, fetchJokes } from "../utils/fetchUtils";
 
@@ -49,7 +50,7 @@ export const SearchView = (props) => {
 	return (
 		<div className="search">
 
-			<Input type={"number"} onChange={setJokeAmount} value={jokeAmount} label={"Vitsien maara: "}/>
+			<NumInput type={"number"} onChange={setJokeAmount} value={jokeAmount} label={"Vitsien maara: "}/>
 			<Input type={"input"} onChange={setFirstName} value={firstName} label={"Etunimi: "}/>
 			<Input type={"input"} onChange={setLastName} value={lastName} label={"Sukunimi: "}/>
 			<Dropdown options={categoryList} onChange={setCategory}/>

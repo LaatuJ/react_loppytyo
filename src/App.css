@@ -52,10 +52,9 @@ li {
   border-bottom: 0.1em solid black;
   padding-right: 15px;
 }
-
-.btn {
-  min-width: 80px;
-  min-height: 20px;
+button {
+  width: 160px;
+  height: 40px;
 }
 p {
   padding: 10px;
