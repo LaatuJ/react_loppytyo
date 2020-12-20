@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { JokeView } from "./components/JokeView";
+import { SearchView } from "./components/SearchView";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [jokeIds, setJokeIds] = useState([]);
+	const [jokes, setJokes] = useState([]);
+	return (
+		<div className="App">
+			<div className="container">
+				<div className="title-container">
+					<h1>CN-Jokes</h1>
+				</div>
+				<SearchView setJokes={setJokes} setJokeIds={setJokeIds} jokeIds={jokeIds}/>
+				<JokeView jokes={jokes} jokeIds={jokeIds}/>
+			</div>
+		</div>
+	);
 }
 
 export default App;
