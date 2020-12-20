@@ -51,8 +51,16 @@ export const SearchView = (props) => {
 		<div className="search">
 
 			<NumInput type={"number"} onChange={setJokeAmount} value={jokeAmount} label={"Vitsien maara: "}/>
-			<Input onChange={setFirstName} value={firstName} label={"Etunimi: "}/>
-			<Input onChange={setLastName} value={lastName} label={"Sukunimi: "}/>
+			{/* <Input onChange={setFirstName} value={firstName} label={"Etunimi: "}/>
+			<Input onChange={setLastName} value={lastName} label={"Sukunimi: "}/> */}
+			<div>
+				<label>Etunimi: </label>
+				<input value={firstName} onChange={(e) => setFirstName(e.target.value)}></input>
+			</div>
+			<div>
+				<label>Sukunimi: </label>
+				<input value={lastName} label={"Sukunimi: "} onChange={(e) => setLastName(e.target.value)}></input>
+			</div>
 			<Dropdown options={categoryList} onChange={setCategory}/>
 			<Button text={"Hae vitsejä"} onClick={() => onClickHandler()}/>
 
