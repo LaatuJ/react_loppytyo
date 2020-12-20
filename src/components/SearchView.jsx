@@ -11,8 +11,8 @@ export const SearchView = (props) => {
 	const [categoryList, setCategoryList] = useState([])
 	const [result, setResult] = useState();
 	const [jokeAmount, setJokeAmount] = useState(10);
-	const [firstName, setFirstName] = useState();
-	const [lastName, setLastName] = useState();
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
 
 	useEffect(() => {
 		const fetchCategorys = async () => {
