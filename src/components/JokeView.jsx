@@ -5,7 +5,6 @@ export const JokeView = (props) => {
 			<div className={"uniikkii"}>
 				<p>Uniikkeja vitsejä näytetty: {jokeIds.length}</p>
 			</div>
-
 			{jokes.length >= 1 &&
 				<ul>
 					{jokes.map((joke, index) => (
@@ -13,9 +12,7 @@ export const JokeView = (props) => {
 					))}
 				</ul>
 			}
-			{jokes.length < 1 && <p>Et ole vielä hakenut ollenkaan vitsejä.</p>}
-
-
+			{jokes.length < 1 && <p>Ei täällä mitään vitsejä ole. Etsi muualta!</p>}
 		</div>
 	);
 };

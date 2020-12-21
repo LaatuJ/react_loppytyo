@@ -11,7 +11,7 @@ function App() {
 			<div className={"side"}></div>
 			<div className="container">
 				<div className="title-container">
-					<h1>Harmaata huumorii</h1>
+					<h1>(-: Harmaata huumorii :-)</h1>
 				</div>
 				<SearchView setJokes={setJokes} setJokeIds={setJokeIds} jokeIds={jokeIds}/>
 				<JokeView jokes={jokes} jokeIds={jokeIds}/>
