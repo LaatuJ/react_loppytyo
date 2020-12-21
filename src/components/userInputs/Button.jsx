@@ -4,7 +4,7 @@ export const Button = (props) => {
 		onClick,
 	} = props;
 	return (
-		<div>
+		<div className={"button-container"}>
 			<button onClick={() => onClick()}>{text}</button>
 		</div>
 	);

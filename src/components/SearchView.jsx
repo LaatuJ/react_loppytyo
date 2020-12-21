@@ -49,13 +49,13 @@ export const SearchView = (props) => {
 	}
 	return (
 		<div className="search">
-
-			<NumInput type={"number"} onChange={setJokeAmount} value={jokeAmount} label={"Vitsien maara: "}/>
-			<Input onChange={setFirstName} value={firstName} label={"Etunimi: "}/>
-			<Input onChange={setLastName} value={lastName} label={"Sukunimi: "}/>
-			<Dropdown options={categoryList} onChange={setCategory}/>
-			<Button text={"Hae vitsejä"} onClick={() => onClickHandler()}/>
-
+			<div className={"search-container"}>
+				<NumInput type={"number"} onChange={setJokeAmount} value={jokeAmount} label={"Vitsien maara: "}/>
+				<Input onChange={setFirstName} value={firstName} label={"Etunimi: "}/>
+				<Input onChange={setLastName} value={lastName} label={"Sukunimi: "}/>
+				<Dropdown options={categoryList} onChange={setCategory}/>
+				<Button text={"Hae vitsejä"} onClick={() => onClickHandler()}/>
+			</div>
 		</div>
 	);
 };
