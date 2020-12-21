@@ -3,7 +3,7 @@ import { JokeView } from "../components/JokeView";
 
 const setup = () => {
 	const utils = render(<JokeView/>);
-	const text = utils.getByText("Et ole vielä hakenut ollenkaan vitsejä.");
+	const text = utils.getByText("Ei täällä mitään vitsejä ole. Etsi muualta!");
 	return {
 		text,
 		...utils,
